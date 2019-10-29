@@ -150,7 +150,7 @@ class KanoModel(object):
             kda_df.insert(11,'Objective', kda_df['Reach'] - kda_df['Noise'])
             kda_df = kda_df.reset_index(drop=True)
             return kda_df.round(2)
-        
+
         elif self._analysis == 'kea':
             kea = self.shapley_values()
             kea_df = pd.DataFrame(kea.items(), columns=['Num', 'Shapley value'])

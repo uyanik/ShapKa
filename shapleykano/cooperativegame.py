@@ -116,7 +116,7 @@ class Game(object):
             
             reach = X_sat_and_y_sat / y_sat
             noise = X_sat_and_y_notsat / y_notsat
-            
+
         #utility = np.nansum(coalition)
         utility = (reach - noise) * 100
 

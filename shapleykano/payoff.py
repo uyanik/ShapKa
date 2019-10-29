@@ -142,7 +142,7 @@ class Payoff():
                 else :
                     #payoff_vector[player] = weighted_contribution
                     payoff_vector[player] = 0
-                    
+
         return payoff_vector
 
 
