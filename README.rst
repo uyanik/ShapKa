@@ -8,13 +8,14 @@ ShapleyKano: a python library to identify customer priorities based on Shapley v
 
 .. image:: https://api.codacy.com/project/badge/Grade/377d37a2dc524055a7dc576c03d3794e    
         :target: https://www.codacy.com/manual/uyanik/shapleykano?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=uyanik/shapleykano&amp;utm_campaign=Badge_Grade
-
-.. image:: https://img.shields.io/travis/auyanik/shapleykano.svg
-        :target: https://travis-ci.org/auyanik/shapleykano
+       
+.. image:: https://travis-ci.org/uyanik/shapleykano.svg?branch=master
+    :target: https://travis-ci.org/uyanik/shapleykano
 
 .. image:: https://readthedocs.org/projects/shapleykano/badge/?version=latest
         :target: https://shapleykano.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
+
 
 
 Installation
