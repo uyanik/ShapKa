@@ -1,6 +1,6 @@
-* ShapleyKano version:
-* Python version:
-* Operating System:
+* ShapleyKano version:  1.0.0
+* Python version:  3.5
+* Operating System:  Linux
 
 ### Description
 
