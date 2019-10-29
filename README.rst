@@ -1,5 +1,5 @@
 ===========
-ShapleyKano: a python library to identify Customer Priorites based on Shapley values and Kano Theory
+ShapleyKano: a python library to identify customer priorities based on Shapley values and Kano model
 ===========
 
 
@@ -19,12 +19,14 @@ Installation
 Use the following command to install the package:
 
 .. code-block:: python
+
    pip install shapleykano
 
-Features
---------
 
-* TODO
+Documentation
+-------
+* Documentation: https://shapleykano.readthedocs.io.
+
 
 Credits
 -------
@@ -41,8 +43,7 @@ References
 
 .. _`W. Michael Conklin, Ken Powaga and Stan Lipovetsky`: https://www.researchgate.net/publication/222399844_Customer_satisfaction_analysis_Identification_of_key_drivers
 
-.. _`https://github.com/sagemath/sage`
+.. _`https://github.com/sagemath/sage`: https://github.com/sagemath/sage
 
 
-* Free software: GPL license
-* Documentation: https://shapleykano.readthedocs.io.
+
