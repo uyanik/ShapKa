@@ -151,4 +151,3 @@ class Payoff():
         Return a concise description of ``self``.
         """
         return "This is a {} players co-operative game".format(self.number_players)
-    

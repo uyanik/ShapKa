@@ -76,7 +76,7 @@ class Game(object):
 
         self._powerset = set_of_all_coalitions
 
-        print('Number of sampled coalitions :',  len(set_of_all_coalitions), ' / ', 2**self._N)
+        print('Number of sampled coalitions:',  len(set_of_all_coalitions), ' / ', 2**self._N)
 
         return set_of_all_coalitions
 
@@ -122,7 +122,7 @@ class Game(object):
         
         return utility
 
-    
+
     def CharacteristicFunction(self, analysis):
         r"""
         The characteristic function v describes the worth of each coalition.

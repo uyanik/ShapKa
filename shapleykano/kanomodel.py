@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This module compute the kano model with shapley values allcoation
+This module compute the kano model with shapley values allocation
 """
 
 import numpy as np
