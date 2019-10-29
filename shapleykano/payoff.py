@@ -23,7 +23,7 @@ def powerset(iterable):
 
     if N <= N_Max :
         for i in range(len(iterable),-1, -1) :
-            for comb in combinations(iterable, i) : 
+            for comb in combinations(iterable, i) :
                 yield comb
 
     elif N > N_Max :
@@ -93,7 +93,7 @@ class Payoff():
         if N <= N_Max :
             for player in self.player_list:
                 weighted_contribution = 0
-                for coalition in powerset(self.player_list):           
+                for coalition in powerset(self.player_list):       
                     if coalition :  # If non-empty
                         k = len(coalition)
                         weight = 1 / (binom(N, k) * k)
@@ -144,7 +144,7 @@ class Payoff():
                     payoff_vector[player] = 0
         
         return payoff_vector
-    
+
 
     def number_of_players(self):
         r"""

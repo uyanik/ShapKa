@@ -119,7 +119,7 @@ class Game(object):
         
         #utility = np.nansum(coalition)
         utility = (reach - noise) * 100
-        
+
         return utility
 
 

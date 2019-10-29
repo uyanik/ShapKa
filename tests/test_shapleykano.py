@@ -6,7 +6,7 @@
 
 import unittest
 
-from shapleykano import shapleykano
+#from shapleykano import shapleykano
 
 
 class TestShapleykano(unittest.TestCase):
