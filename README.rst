@@ -1,5 +1,5 @@
 ===========
-ShapleyKano
+ShapleyKano: a python library to identify Customer Priorites based on Shapley values and Kano Theory
 ===========
 
 
@@ -14,14 +14,12 @@ ShapleyKano
         :alt: Documentation Status
 
 
+Installation
+--------
+Use the following command to install the package:
 
-
-Python Boilerplate contains all the boilerplate you need to create a Python package.
-
-
-* Free software: MIT license
-* Documentation: https://shapleykano.readthedocs.io.
-
+.. code-block:: python
+   pip install shapleykano
 
 Features
 --------
@@ -31,7 +29,20 @@ Features
 Credits
 -------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+The shapleykano package is based on the methodology developped by `W. Michael Conklin, Ken Powaga and Stan Lipovetsky`_
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+References
+-------
+* Conklin, Michael & Powaga, Ken & Lipovetsky, Stan. (2004). Customer satisfaction analysis: Identification of key drivers. European Journal of Operational Research. 154. 819-827. 10.1016/S0377-2217(02)00877-9. 
+
+* Sage: Open Source Mathematical Software : `https://github.com/sagemath/sage`_
+
+.. _`W. Michael Conklin, Ken Powaga and Stan Lipovetsky`: https://www.researchgate.net/publication/222399844_Customer_satisfaction_analysis_Identification_of_key_drivers
+
+.. _`https://github.com/sagemath/sage`
+
+
+* Free software: GPL license
+* Documentation: https://shapleykano.readthedocs.io.
