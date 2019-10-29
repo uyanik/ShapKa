@@ -149,8 +149,9 @@ class KanoModel(object):
             kda_df.insert(10,'Noise', self.noise_coalition(kda_df[['Num']]))
             kda_df.insert(11,'Objective', kda_df['Reach'] - kda_df['Noise'])
             kda_df = kda_df.reset_index(drop=True)
+            
             return kda_df.round(2)
-
+        
         elif self._analysis == 'kea':
             kea = self.shapley_values()
             kea_df = pd.DataFrame(kea.items(), columns=['Num', 'Shapley value'])
@@ -166,4 +167,5 @@ class KanoModel(object):
             kea_df.insert(10,'Noise', self.noise_coalition(kea_df[['Num']]))
             kea_df.insert(11,'Objective', kea_df['Reach'] - kea_df['Noise'])
             kea_df = kea_df.reset_index(drop=True)
+            
             return kea_df.round(2)

@@ -93,7 +93,7 @@ class Payoff():
         if N <= N_Max :
             for player in self.player_list:
                 weighted_contribution = 0
-                for coalition in powerset(self.player_list):   
+                for coalition in powerset(self.player_list):
                     if coalition :  # If non-empty
                         k = len(coalition)
                         weight = 1 / (binom(N, k) * k)
@@ -142,7 +142,7 @@ class Payoff():
                 else :
                     #payoff_vector[player] = weighted_contribution
                     payoff_vector[player] = 0
-
+                    
         return payoff_vector
 
 
