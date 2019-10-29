@@ -12,8 +12,7 @@ class Game(object):
     r"""
     An object representing a co-operative game.
     A co-cooperative game with n-players is characterised by a characteristic function v(S)
-    The characteristic function return for every potential coalition S,
-    the associated utility (or payoff)
+    The characteristic function return for every potential coalition S, the associated utility (or payoff)
     """
     
     def __init__(self, X, y,
@@ -92,16 +91,16 @@ class Game(object):
         in the coalition among those who are satisfied overall
         """
 
-        if analysis == 'kda': 
+        if analysis == 'kda':
             idx_dissat = np.where(self._y <= self._y_dissat_upperbound)
             idx_notdissat = np.where(self._y > self._y_dissat_upperbound)
-
+            
             y_dissat = np.nansum(self._y <= self._y_dissat_upperbound)
             y_notdissat = np.nansum(self._y > self._y_dissat_upperbound)
-
+            
             X_dissat_and_y_dissat = np.nansum(np.any(self._X[idx_dissat[0]][:, coalition] <= self._X_dissat_upperbound, axis=1))
             X_dissat_and_y_notdissat = np.nansum(np.any(self._X[idx_notdissat[0]][:, coalition] <= self._X_dissat_upperbound, axis=1))
-
+            
             reach = X_dissat_and_y_dissat / y_dissat 
             noise = X_dissat_and_y_notdissat / y_notdissat
             
