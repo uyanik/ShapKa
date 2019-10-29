@@ -39,7 +39,7 @@ References
 -------
 * Conklin, Michael & Powaga, Ken & Lipovetsky, Stan. (2004). Customer satisfaction analysis: Identification of key drivers. European Journal of Operational Research. 154. 819-827. 10.1016/S0377-2217(02)00877-9. 
 
-* Sage: Open Source Mathematical Software : `https://github.com/sagemath/sage`_
+* Sage - Open Source Mathematical Software : `https://github.com/sagemath/sage`_
 
 .. _`W. Michael Conklin, Ken Powaga and Stan Lipovetsky`: https://www.researchgate.net/publication/222399844_Customer_satisfaction_analysis_Identification_of_key_drivers
 

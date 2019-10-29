@@ -9,10 +9,12 @@ from math import factorial, ceil
 seed(666)
 
 class Game(object):
-    """An object representing a co-operative game.
+    r"""
+    An object representing a co-operative game.
     A co-cooperative game with n-players is characterised by a characteristic function v(S)
-    The characteristic function return for every potential coalition S, 
-    the associated utility (or payoff) """
+    The characteristic function return for every potential coalition S,
+    the associated utility (or payoff)
+    """
     
     def __init__(self, X, y,
                  y_dissat_upperbound, y_sat_lowerbound,
@@ -30,8 +32,8 @@ class Game(object):
     
     def PowerSet(self):
         r"""
-        The powerset all possible subsets of a set of players in no particular order. 
-        Exemple : for the list [1, 2, 3], the power set is 
+        The powerset all possible subsets of a set of players in no particular order.
+        Exemple : for the list [1, 2, 3], the power set is
         [[],[1],[2],[3],[1, 2],[1, 3],[2, 3],[1, 2, 3]]
         """
         
@@ -84,22 +86,22 @@ class Game(object):
         r"""
         We compute the utility for each coalition. Utility function is defined as
         the difference between the Reach level and Noise level
-        The Reach level shows the prevalence of failure on any attributes 
+        The Reach level shows the prevalence of failure on any attributes
         in the coalition among those who are dissatisfied overall
-        The Noise level shows the prevalence of failure on any attributes 
-        in the coalition among those who are satisfied overall 
+        The Noise level shows the prevalence of failure on any attributes
+        in the coalition among those who are satisfied overall
         """
 
         if analysis == 'kda': 
             idx_dissat = np.where(self._y <= self._y_dissat_upperbound)
             idx_notdissat = np.where(self._y > self._y_dissat_upperbound)
-            
+
             y_dissat = np.nansum(self._y <= self._y_dissat_upperbound)
             y_notdissat = np.nansum(self._y > self._y_dissat_upperbound)
-            
+
             X_dissat_and_y_dissat = np.nansum(np.any(self._X[idx_dissat[0]][:, coalition] <= self._X_dissat_upperbound, axis=1))
             X_dissat_and_y_notdissat = np.nansum(np.any(self._X[idx_notdissat[0]][:, coalition] <= self._X_dissat_upperbound, axis=1))
-        
+
             reach = X_dissat_and_y_dissat / y_dissat 
             noise = X_dissat_and_y_notdissat / y_notdissat
             
@@ -112,7 +114,7 @@ class Game(object):
             
             X_sat_and_y_sat = np.nansum(np.any(self._X[idx_sat[0]][:, coalition] >= self._X_sat_lowerbound, axis=1))
             X_sat_and_y_notsat = np.nansum(np.any(self._X[idx_notsat[0]][:, coalition] >= self._X_sat_lowerbound, axis=1))
-        
+            
             reach = X_sat_and_y_sat / y_sat
             noise = X_sat_and_y_notsat / y_notsat
         
@@ -124,9 +126,9 @@ class Game(object):
     
     def CharacteristicFunction(self, analysis):
         r"""
-        The characteristic function v describes the worth of each coalition. 
-        The goal is to split the worth (defined by the characteristic function) 
-        among the players in a “fair” way
+        The characteristic function v describes the worth of each coalition.
+        The goal is to split the worth (defined by the characteristic function)
+        among the players in a fair way
         """
-        return {tuple(coalition) : self.UtilityFunction(coalition, analysis) 
+        return {tuple(coalition) : self.UtilityFunction(coalition, analysis)
                 for coalition in self.PowerSet()}
