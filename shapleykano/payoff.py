@@ -13,7 +13,7 @@ seed(666)
 
 def powerset(iterable):
     r"""
-    The powerset is the set of all possible subsets of a set in no particular order. 
+    The powerset is the set of all possible subsets of a set in no particular order.
     Exemple : for the list [1, 2, 3], the power set is [[],[1],[2],[3],[1, 2],[1, 3],[2, 3],[1, 2, 3]]
     """
 
@@ -46,7 +46,7 @@ def powerset(iterable):
 class Payoff():
     r"""
     An object representing a payoff model for a fair distribution of the total payoff between players.
-    It primarily used to compute the Shapley value but it also provides methods to check some 
+    It primarily used to compute the Shapley value but it also provides methods to check some
     desirable properties of Shapley values : Efficiency, Symmetry, Linearity, Null player.
     The Shapley values are the only allocation vectors that satisfies all those properties.
     """
@@ -82,7 +82,7 @@ class Payoff():
     def shapley_value(self):
         r"""
         Return the Shapley value for ``self``.
-        The Shapley value is the "fair" payoff vector and is computed by 
+        The Shapley value is the fair payoff vector and is computed by
         the following formula:
         """
         
@@ -107,13 +107,13 @@ class Payoff():
                     payoff_vector[player] = 0
         
         elif N > N_Max :
-            char_function = self.ch_f 
+            char_function = self.ch_f
 
             for player in self.player_list:
 
-                weighted_contribution = 0   
+                weighted_contribution = 0
 
-                for j in range(1, len(self.player_list)): 
+                for j in range(1, len(self.player_list)):
                     weight = 1 / (N-j)
 
                     Mkj = {k: v for k, v in char_function.items() if len(k) == j and player in k}

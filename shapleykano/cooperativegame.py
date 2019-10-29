@@ -84,9 +84,9 @@ class Game(object):
     def UtilityFunction(self, coalition, analysis):
         r"""
         We compute the utility for each coalition. Utility function is defined as
-        the difference between the Reach level and Noise level
+        the difference between the Reach level and Noise level.
         The Reach level shows the prevalence of failure on any attributes
-        in the coalition among those who are dissatisfied overall
+        in the coalition among those who are dissatisfied overall.
         The Noise level shows the prevalence of failure on any attributes
         in the coalition among those who are satisfied overall
         """

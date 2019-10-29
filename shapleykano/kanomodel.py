@@ -121,7 +121,7 @@ class KanoModel(object):
                 noise = X_dissat_and_y_notdissat / y_notdissat * 100
                 noise_coalition.append(float(noise))
 
-        elif self._analysis == 'kea': 
+        elif self._analysis == 'kea':
             idx_notsat = np.where(self._y < self._y_sat_lowerbound)
             y_notsat = sum(self._y < self._y_sat_lowerbound)
             for (index_label, row_series) in ranking_players.iterrows():
