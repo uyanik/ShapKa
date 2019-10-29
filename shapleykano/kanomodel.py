@@ -13,9 +13,9 @@ class KanoModel(object):
     """
     Description
     """
-    def __init__(self, df, 
-                 y_varname, X_varnames, 
-                 analysis, 
+    def __init__(self, df,
+                 y_varname, X_varnames,
+                 analysis,
                  y_dissat_upperbound, y_sat_lowerbound,
                  X_dissat_upperbound, X_sat_lowerbound):
         self._df = df
@@ -34,7 +34,7 @@ class KanoModel(object):
 
         print("Computing Shapley values: it could take some time ...")
 
-        game = Game(self._X, self._y, 
+        game = Game(self._X, self._y,
                     self._y_dissat_upperbound, self._y_sat_lowerbound,
                     self._X_dissat_upperbound, self._X_sat_lowerbound)
 
@@ -98,7 +98,7 @@ class KanoModel(object):
             coalition = []
             reach_coalition = []
             idx_sat = np.where(self._y >= self._y_sat_lowerbound)
-            y_sat = sum(self._y >= self._y_sat_lowerbound) 
+            y_sat = sum(self._y >= self._y_sat_lowerbound)
             for (index_label, row_series) in ranking_players.iterrows():
                 coalition.append(index_label)
                 X_sat_and_y_sat = sum(np.any(self._X[idx_sat[0]][:, coalition] >= self._X_sat_lowerbound, axis=1))
@@ -167,4 +167,3 @@ class KanoModel(object):
             kea_df.insert(11,'Objective', kea_df['Reach'] - kea_df['Noise'])
             kea_df = kea_df.reset_index(drop=True)
             return kea_df.round(2)
-        

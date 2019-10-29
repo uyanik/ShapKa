@@ -1,6 +1,6 @@
 """
-This module implements a class for shapley values allocation as fair payoff 
-distribution between players in cooperative game.
+This module implements a class for shapley values allocation as fair payoff
+distribution between players in cooperative game
 """
 
 import numpy as np
@@ -23,7 +23,7 @@ def powerset(iterable):
 
     if N <= N_Max :
         for i in range(len(iterable),-1, -1) :
-            for comb in combinations(iterable, i):    
+            for comb in combinations(iterable, i) : 
                 yield comb
 
     elif N > N_Max :
@@ -92,9 +92,9 @@ class Payoff():
         
         if N <= N_Max :
             for player in self.player_list:
-                weighted_contribution = 0          
-                for coalition in powerset(self.player_list):               
-                    if coalition :  # If non-empty    
+                weighted_contribution = 0
+                for coalition in powerset(self.player_list):           
+                    if coalition :  # If non-empty
                         k = len(coalition)
                         weight = 1 / (binom(N, k) * k)
                         t = tuple(p for p in coalition if p != player)
@@ -145,9 +145,9 @@ class Payoff():
         
         return payoff_vector
     
-    
+
     def number_of_players(self):
         r"""
-        Return a concise description of ``self``.
+        Return a concise description of ``self``
         """
         return "This is a {} players co-operative game".format(self.number_players)

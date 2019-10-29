@@ -101,7 +101,7 @@ class Game(object):
             X_dissat_and_y_dissat = np.nansum(np.any(self._X[idx_dissat[0]][:, coalition] <= self._X_dissat_upperbound, axis=1))
             X_dissat_and_y_notdissat = np.nansum(np.any(self._X[idx_notdissat[0]][:, coalition] <= self._X_dissat_upperbound, axis=1))
             
-            reach = X_dissat_and_y_dissat / y_dissat 
+            reach = X_dissat_and_y_dissat / y_dissat
             noise = X_dissat_and_y_notdissat / y_notdissat
             
         elif analysis == 'kea':
