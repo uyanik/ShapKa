@@ -53,7 +53,7 @@ Use the following command for a key dissatisfaction drivers analysis (kda) :
 
     model.key_drivers()
 
-Replace 'kda' by 'kea' in the analysis parameter if you wqant to identify key enhancers (kea) instead of key dissatisfiers
+Replace 'kda' by 'kea' in the analysis parameter if you want to identify key enhancers (kea) instead of key dissatisfiers
 
 
 Documentation
@@ -64,8 +64,9 @@ Documentation
 Credits
 -------
 
-The shapleykano package is based on the methodology developped by `W. Michael Conklin, Ken Powaga and Stan Lipovetsky`_
-Some parts of the code are based on functions implemented in the `Open Source Sage Mathematical Software`_
+* The shapleykano package is based on the methodology developped by `W. Michael Conklin, Ken Powaga and Stan Lipovetsky`_
+
+* Some parts of the code are based on functions implemented in the `Open Source Sage Mathematical Software`_
 
 
 References
