@@ -41,7 +41,7 @@ setup(
     include_package_data=True,
     keywords='shapleykano',
     name='shapleykano',
-    scripts=["shapleykano/kanomodel.py", "shapleykano/cooperativegame.py", "shapleykano/payoff.py"],
+    #scripts=["shapleykano/kanomodel.py", "shapleykano/cooperativegame.py", "shapleykano/payoff.py"],
     packages=find_packages(include=['shapleykano', 'shapleykano.*']),
     setup_requires=setup_requirements,
     test_suite='tests',

@@ -1,6 +1,6 @@
-===========
+====================================================================================================
 ShapleyKano: a python library to identify customer priorities based on Shapley values and Kano model
-===========
+====================================================================================================
 
 
 .. image:: https://img.shields.io/pypi/v/shapleykano.svg
@@ -19,7 +19,7 @@ ShapleyKano: a python library to identify customer priorities based on Shapley v
 
 
 Installation
---------
+------------
 Use the following command to install the package:
 
 .. code-block:: python
@@ -28,19 +28,13 @@ Use the following command to install the package:
 
 
 Usage
---------
+-----
 Use the following command for a key dissatifaction drivers analysis (kda) :
 Replace "kda" by "kea" in the analysis parameter for a key satifaction drivers analysis (kea)
+
 .. code-block:: python 
 
-    import pandas as pd
     from shapleykano.kanomodel import KanoModel
-
-    df = pd.read_csv('../data/example_01.csv')
-
-    y_varname = 'Overall Satisfaction'
-    X_varnames = df.columns.values.tolist()
-    X_varnames.remove(y_varname)
 
     model = KanoModel(df, 
                       y_varname, X_varnames, 
@@ -48,11 +42,11 @@ Replace "kda" by "kea" in the analysis parameter for a key satifaction drivers a
                       y_dissat_upperbound = 6, y_sat_lowerbound = 9,
                       X_dissat_upperbound = 6, X_sat_lowerbound = 9)
 
-    kda = model.key_drivers() ;kda
+    model.key_drivers()
 
 
 Documentation
--------
+-------------
 * Documentation: https://shapleykano.readthedocs.io.
 
 
@@ -64,7 +58,7 @@ Some parts of the code are based on functions implemented in the `Open Source Sa
 
 
 References
--------
+----------
 * Conklin, Michael & Powaga, Ken & Lipovetsky, Stan. (2004). Customer satisfaction analysis: Identification of key drivers. European Journal of Operational Research. 154. 819-827. 10.1016/S0377-2217(02)00877-9. 
 
 * Sage - Open Source Mathematical Software : `https://github.com/sagemath/sage`_
