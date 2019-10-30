@@ -53,6 +53,12 @@ Use the following command for a key dissatisfaction drivers analysis (kda) :
 
     model.key_drivers()
 
+
+Here is the ouput :
+
+.. image:: img/output1_shapleykano.PNG
+  :width: 600
+  
 Replace 'kda' by 'kea' in the analysis parameter if you want to identify key enhancers (kea) instead of key dissatisfiers
 
 
