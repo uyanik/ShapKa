@@ -29,13 +29,22 @@ Use the following command to install the package:
 
 Usage
 -----
-Use the following command for a key dissatifaction drivers analysis (kda) :
-Replace "kda" by "kea" in the analysis parameter for a key satifaction drivers analysis (kea)
+Use the following command for a key dissatisfaction drivers analysis (kda) :
 
 .. code-block:: python 
 
+    import pandas as pd
     from shapleykano.kanomodel import KanoModel
-
+    
+    # Load data
+    df = pd.read_csv('data/example_01.csv')
+    
+    # Define X and Y variables names
+    y_varname = 'Overall Satisfaction'
+    X_varnames = df.columns.values.tolist()
+    X_varnames.remove(y_varname)
+    
+    # Run analysis to identify key dissatisfiers
     model = KanoModel(df, 
                       y_varname, X_varnames, 
                       analysis = 'kda',
@@ -43,6 +52,8 @@ Replace "kda" by "kea" in the analysis parameter for a key satifaction drivers a
                       X_dissat_upperbound = 6, X_sat_lowerbound = 9)
 
     model.key_drivers()
+
+Replace 'kda' by 'kea' in the analysis parameter if you wqant to identify key enhancers (kea) instead of key dissatisfiers
 
 
 Documentation
