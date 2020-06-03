@@ -1,6 +1,6 @@
-====================================================================================================
-ShapleyKano: a python library to identify customer priorities based on Shapley values and Kano model
-====================================================================================================
+======================================================================================================================
+ShapKa: an open source python library to identify customer satisfaction drivers based on Shapley values and Kano model
+======================================================================================================================
 
 
 .. image:: https://img.shields.io/pypi/v/shapleykano.svg
@@ -10,7 +10,7 @@ ShapleyKano: a python library to identify customer priorities based on Shapley v
         :target: https://www.codacy.com/manual/uyanik/shapleykano?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=uyanik/shapleykano&amp;utm_campaign=Badge_Grade
        
 .. image:: https://travis-ci.org/uyanik/shapleykano.svg?branch=master
-    :target: https://travis-ci.org/uyanik/shapleykano
+        :target: https://travis-ci.org/uyanik/shapleykano
 
 .. image:: https://readthedocs.org/projects/shapleykano/badge/?version=latest
         :target: https://shapleykano.readthedocs.io/en/latest/?badge=latest
@@ -24,7 +24,7 @@ Use the following command to install the package:
 
 .. code-block:: python
 
-   pip install shapleykano
+   pip install ShapKa
 
 
 Usage
@@ -34,30 +34,33 @@ Use the following command for a key dissatisfaction drivers analysis (kda) :
 .. code-block:: python 
 
     import pandas as pd
-    from shapleykano.kanomodel import KanoModel
+    from ShapKa.kanomodel import KanoModel
     
     # Load data
-    df = pd.read_csv('data/example_01.csv')
+    df = pd.read_csv('data/example_03.csv')
     
     # Define X and Y variables names
     y_varname = 'Overall Satisfaction'
+    weight_varname = 'Weight'
     X_varnames = df.columns.values.tolist()
     X_varnames.remove(y_varname)
+    X_varnames.remove(weight_varname)
     
     # Run analysis to identify key dissatisfiers
     model = KanoModel(df, 
                       y_varname, X_varnames, 
                       analysis = 'kda',
                       y_dissat_upperbound = 6, y_sat_lowerbound = 9,
-                      X_dissat_upperbound = 6, X_sat_lowerbound = 9)
+                      X_dissat_upperbound = 6, X_sat_lowerbound = 9,
+                      weight_varname = weight_varname)
 
-    model.key_drivers()
+    kda = model.key_drivers() ;kda
 
 
 Here is the ouput :
 
-.. image:: img/output1_shapleykano.png
-  :width: 600
+.. image:: img/output_ShapKa.png
+        :width: 600
   
 Replace 'kda' by 'kea' in the analysis parameter if you want to identify key enhancers (kea) instead of key dissatisfiers
 
@@ -70,7 +73,7 @@ Documentation
 Credits
 -------
 
-* The shapleykano package is based on the methodology developped by `W. Michael Conklin, Ken Powaga and Stan Lipovetsky`_
+* The ShapKa package is based on the methodology developped by `W. Michael Conklin, Ken Powaga and Stan Lipovetsky`_
 
 * Some parts of the code are based on functions implemented in the `Open Source Sage Mathematical Software`_
 
