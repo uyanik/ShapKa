@@ -172,7 +172,6 @@ class KanoModel(object):
 
         return reach_coalition
 
-
     def noise_coalition(self, ranking_players):
         coalition = []
         noise_coalition = []
