@@ -6,9 +6,10 @@ ShapKa: an open source python library to identify customer satisfaction drivers 
 .. image:: https://img.shields.io/pypi/v/shapka.svg
         :target: https://pypi.python.org/pypi/shapka
 
-.. image:: https://app.codacy.com/project/badge/Grade/2f72d1edadac4962baae68d9c5d901de    
-        :target: https://www.codacy.com/gh/uyanik/ShapKa/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=uyanik/ShapKa&amp;utm_campaign=Badge_Grade
-
+.. image:: https://api.codacy.com/project/badge/Grade/a4147175b8fd4dbc8264575c0c7868ee
+   :alt: Codacy Badge
+   :target: https://app.codacy.com/gh/uyanik/ShapKa?utm_source=github.com&utm_medium=referral&utm_content=uyanik/ShapKa&utm_campaign=Badge_Grade
+   
 .. image:: https://travis-ci.org/uyanik/ShapKa.svg?branch=master
     :target: https://travis-ci.org/uyanik/ShapKa
 
@@ -89,8 +90,3 @@ References
 .. _`https://github.com/sagemath/sage`: https://github.com/sagemath/sage
 
 .. _`Open Source Sage Mathematical Software`: https://github.com/sagemath/sage
-
-
-.. image:: https://api.codacy.com/project/badge/Grade/a4147175b8fd4dbc8264575c0c7868ee
-   :alt: Codacy Badge
-   :target: https://app.codacy.com/gh/uyanik/ShapKa?utm_source=github.com&utm_medium=referral&utm_content=uyanik/ShapKa&utm_campaign=Badge_Grade
