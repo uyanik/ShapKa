@@ -8,7 +8,10 @@ ShapKa: an open source python library to identify customer satisfaction drivers 
 
 .. image:: https://app.codacy.com/project/badge/Grade/2f72d1edadac4962baae68d9c5d901de    
         :target: https://www.codacy.com/gh/uyanik/ShapKa/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=uyanik/ShapKa&amp;utm_campaign=Badge_Grade
-               
+
+.. image:: https://travis-ci.org/uyanik/ShapKa.svg?branch=master
+    :target: https://travis-ci.org/uyanik/ShapKa
+
 .. image:: https://readthedocs.org/projects/shapka/badge/?version=latest
         :target: https://shapka.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
