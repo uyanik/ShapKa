@@ -68,7 +68,7 @@ Replace 'kda' by 'kea' in the analysis parameter if you want to identify key enh
 
 Documentation
 -------------
-* Documentation: https://shapleykano.readthedocs.io.
+* Documentation: https://shapka.readthedocs.io.
 
 
 Credits
