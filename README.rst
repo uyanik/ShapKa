@@ -86,3 +86,8 @@ References
 .. _`https://github.com/sagemath/sage`: https://github.com/sagemath/sage
 
 .. _`Open Source Sage Mathematical Software`: https://github.com/sagemath/sage
+
+
+.. image:: https://api.codacy.com/project/badge/Grade/a4147175b8fd4dbc8264575c0c7868ee
+   :alt: Codacy Badge
+   :target: https://app.codacy.com/gh/uyanik/ShapKa?utm_source=github.com&utm_medium=referral&utm_content=uyanik/ShapKa&utm_campaign=Badge_Grade
