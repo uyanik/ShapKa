@@ -1,5 +1,5 @@
 ======================================================================================================================
-ShapKa: an open source python library to identify customer satisfaction drivers based on Shapley values and Kano model
+ShapKa: Customer Satisfaction Key Drivers based on Shapley values and Kano model
 ======================================================================================================================
 
 
